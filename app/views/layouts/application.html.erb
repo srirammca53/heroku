@@ -7,7 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body background="/images/green.jpg">
-
+  <div id="user_nav">
+<% if author_signed_in? %>
+Signed in as <%= current_author.email %>. Not you?
+<%= link_to "Sign out", destroy_author_session_path %>
+<% else %>
+<%= link_to "Sign up", new_author_registration_path %> or <%= link_to "sign in", new_author_session_path %>
+<% end %>
+</div> 
 <%= yield %>
 
 </body>

@@ -1,2 +1,7 @@
-<h1>Home#index</h1>
-<%= link_to "user", users_path %>
+<h1>Dairy</h1>
+<% if !author_signed_in? %>
+<p> sign in to add friends </p>
+<% end %>
+<% if author_signed_in? %>
+<%= link_to "Add Friends", users_path %>
+<% end %>

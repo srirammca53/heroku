@@ -1,4 +1,6 @@
 Heroku::Application.routes.draw do
+  devise_for :authors
+
   resources :users
 
   get "home/index"

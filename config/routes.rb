@@ -7,6 +7,7 @@ resources :users
   
   devise_for :users, :controllers => {:passwords => "passwords"}
 
+ 
 
   get "home/index"
 

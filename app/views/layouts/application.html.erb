@@ -13,10 +13,10 @@ Signed in as <%= current_author.email %>. Not you?
 <%= link_to "Sign out", destroy_author_session_path %>
 <% else %>
 <%= link_to "Sign up", new_author_registration_path %> or <%= link_to "sign in", new_author_session_path %>
+<% end %>
+<% if author_signed_in? %>
 <%= link_to "Edit your account", edit_author_registration_path %> 
 <% end %>
-
-
 </div> 
 <%= yield %>
 

@@ -54,4 +54,8 @@ class Devise::RegistrationsController < ApplicationController
       send(:"authenticate_#{resource_name}!")
       self.resource = resource_class.find(send(:"current_#{resource_name}").id)
     end
+    def after_update_path_for(resource)
+  edit_user_registration_path # You can put whatever path you want here
+end
+
 end

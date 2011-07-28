@@ -6,6 +6,12 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+ul.hmenu {
+  list-style: none;	
+  margin: 0 0 2em;
+  padding: 0;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;

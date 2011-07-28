@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110727055656) do
 
   create_table "authors", :force => true do |t|
+    t.integer  "user_id"
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
     t.string   "password_salt",                       :default => "", :null => false

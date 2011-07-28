@@ -1,6 +1,7 @@
 class DeviseCreateAuthors < ActiveRecord::Migration
   def self.up
     create_table(:authors) do |t|
+  
       t.database_authenticatable :null => false
       t.confirmable
       t.recoverable

@@ -1,7 +1,12 @@
 Heroku::Application.routes.draw do
-  devise_for :authors
 
-  resources :users
+resources :users
+
+  devise_for :authors
+  devise_for :controllers => { :registrations => "registrations" }
+  
+  devise_for :users, :controllers => {:passwords => "passwords"}
+
 
   get "home/index"
 

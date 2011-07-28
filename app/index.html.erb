@@ -1,0 +1,27 @@
+<center><h1>Listing Friends</h1></center>
+
+<hr/>
+<%= link_to 'New Friend', new_user_path %>
+
+<% @users.each do |user| %>
+  <table>
+    <tr><td>Name:</td>
+    <td><%= user.name %><td></tr><br>
+    <tr><td>Email:</td>
+    <td><%= user.mail %></td></tr><br>
+    <tr><td>Address:</td>
+    <td><%= user.address %></td></tr><br>
+    <tr><td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr><br>
+<% end %>
+</table>
+<br>
+<br>
+<hr/>
+<%= will_paginate(@users) %>
+
+<br />
+
+
